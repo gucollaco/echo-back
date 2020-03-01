@@ -2,9 +2,9 @@ const { atividades } = require('../services')
 const { createAtividade, retriveAtividade, retrieveAtividades } = atividades
 
 const getAtividade = async (req, res, next) => {
-    const { id } = req.param
+    const { idAtividade } = req.param
     try {
-        const atividade =  await retriveAtividade(id)
+        const atividade =  await retriveAtividade(idAtividade)
         res.status(200).send(atividade)
         next()
     } catch(e) {
