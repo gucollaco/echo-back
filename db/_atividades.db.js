@@ -1,16 +1,16 @@
 const atividadeInsert = (user, content) => {
     // `INSERT INTO atividade (user_name, blogpost_body)
-    // VALUES (user, content);`
+    // VALUES ();`
     return 1
 }
-const atividadeSelectSpecific = (user, content) => {
+const atividadeSelectSpecific = (id) => {
     // `SELECT * FROM atividade (user_name, blogpost_body)
-    // VALUES (user, content)
+    // VALUES ()
     // WHERE id = 'ble';`
     return 1
 }
 
-const atividadeSelectAll = (user, content) => {
+const atividadeSelectAll = () => {
     // `SELECT * FROM atividade (user_name, blogpost_body);
     return 1
 }
