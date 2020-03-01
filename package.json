@@ -1,0 +1,8 @@
+{
+  "name": "echo-back",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "https://github.com/gucollaco/echo-back.git",
+  "author": "Gustavo Collaço <gustavo.m.collaco@gmail.com>",
+  "license": "MIT"
+}
