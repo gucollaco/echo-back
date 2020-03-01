@@ -1,10 +1,6 @@
 const { atividades } = require('../db')
-const { atividadeInsert, } = atividades
+const { atividadeInsert, atividadeSelectAll, atividadeSelectSpecific } = atividades
 
-/*
-* if you need to make calls to additional tables, data stores (Redis, for example), 
-* or call an external endpoint as part of creating the blogpost, add them to this service
-*/
 const createAtividade = async (user, content) => {
     try {
         return await atividadeInsert(user, content)
@@ -13,17 +9,17 @@ const createAtividade = async (user, content) => {
     }
 }
 
-const retriveAtividade = async (user, content) => {
+const retriveAtividade = async (id) => {
     try {
-        return await atividadeDb(user, content)
+        return await atividadeSelectSpecific(id)
     } catch(e) {
         throw new Error(e.message)
     }
 }
 
-const retriveAtividades = async (user, content) => {
+const retriveAtividades = async () => {
     try {
-        return await atividadeDb(user, content)
+        return await atividadeSelectAll()
     } catch(e) {
         throw new Error(e.message)
     }
